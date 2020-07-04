@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch('POSTGRES_POOL_CONN') { 5 } %>
+  host: <%= ENV.fetch('POSTGRES_HOST') { 'localhost' } %>
+  port: <%= ENV.fetch('POSTGRES_PORT') { 5432 } %>
+  username: <%= ENV.fetch('POSTGRES_USER') { 'postgres' } %>
+  password: <%= ENV.fetch('POSTGRES_PASSWORD') { 'postgres' } %>
+  database: <%= ENV.fetch('POSTGRES_DB', nil) %>
+
+development:
+  <<: *default
+  database: chashback_development
+
+test:
+  <<: *default
+  database: chashback_test
+
+production:
+  <<: *default
