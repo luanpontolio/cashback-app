@@ -24,7 +24,18 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'rspec'
+  gem 'factory_bot_rails'
+  gem 'faker'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'serverspec', require: false
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'database_cleaner'
+  gem 'simplecov', require: false
+  gem 'simplecov-rcov', require: false
+  gem 'rails-controller-testing'
 end
 
 group :development do
