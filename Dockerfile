@@ -9,7 +9,7 @@ WORKDIR ${app_root}
 
 COPY Gemfile Gemfile.lock ./
 
-RUN bundle install --deployment --without=development test
+RUN bundle install
 
 COPY . ./
 
