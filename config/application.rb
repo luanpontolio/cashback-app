@@ -16,6 +16,7 @@ module CashbackApp
 
     # loading parsers
     config.autoload_paths << Rails.root.join('lib', 'operation')
+    config.autoload_paths << Rails.root.join('app', 'services', '**', '*.rb')
     config.autoload_paths << Rails.root.join('app', 'operations', '**', '*.rb')
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
