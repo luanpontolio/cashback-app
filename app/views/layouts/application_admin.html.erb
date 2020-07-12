@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Lemoney Admin</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application_admin', media: 'all' %>
+    <%= javascript_include_tag 'application_admin' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <a href="/admin" alt="Index">
+          <img class="lemony-img-header" alt="Lemoney" src="/assets/lemoney.svg">
+        </a>
+      </div>
+
+      <%= yield %>
+    </div>
+  </body>
+</html>

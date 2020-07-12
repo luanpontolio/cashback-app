@@ -1,0 +1,31 @@
+form {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  abbr[title] {
+    text-decoration: none;
+    color: red;
+  }
+
+  .form-check-label {
+    &.boolean {
+      padding-left: 2px;
+    }
+  }
+
+  .form-group {
+    &.datetime {
+      .d-flex {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: baseline;
+
+        &>* {
+          padding-left: 2px ;
+        }
+      }
+    }
+  }
+}

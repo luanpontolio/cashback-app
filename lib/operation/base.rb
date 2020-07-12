@@ -26,8 +26,7 @@ module Operation
     end
 
     def process(params)
-      raise NotImplementedError,
-        "You should implement method:\n process(params)"
+      raise NotImplementedError
     end
 
     def validate(params); end
