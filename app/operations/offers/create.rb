@@ -1,7 +1,7 @@
 # This is an operation to create a new offer.
 # Input data:
 # {
-#   advertiser_name: 'Luan Test',
+#   advertiser_name: 'Test',
 #   url: 'http://walmart.com',
 #   description: 'Something',
 #   start_at: '2020-07-03T10:00:00',

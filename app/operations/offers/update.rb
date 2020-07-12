@@ -1,6 +1,6 @@
 # This is an operation to update an offer.
 # Input data:
-# {advertiser_name: 'Luan Test', url: 'http://walmart.com', description: 'Something', start_at: '2020-07-03', end_at: '2020-07-06'}
+# {advertiser_name: 'Test', url: 'http://walmart.com', description: 'Something', start_at: '2020-07-03', end_at: '2020-07-06'}
 #
 module Operations
   module Offers

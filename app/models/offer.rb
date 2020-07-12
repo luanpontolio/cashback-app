@@ -6,9 +6,15 @@ class Offer < ApplicationRecord
 
   enum state: [:disabled, :enabled]
 
-  def change!(value)
+  def start_at!
     self.start_at = DateTime.current
-    self.state = value
+    self.state = :enabled
+    self.save!
+  end
+
+  def end_at!
+    self.end_at = DateTime.current
+    self.state = :disabled
     self.save!
   end
 end

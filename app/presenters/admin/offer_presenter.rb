@@ -26,7 +26,7 @@ class Admin::OfferPresenter < SimpleDelegator
 
   def enabled_link
     type = offer.enabled? ? 'disabled' : 'enabled'
-    helper.link_to I18n.t("page.admin.offer.actions.button.#{type}"), "/admin/offers/#{offer.id}/state/#{type}",
+    helper.link_to I18n.t("page.admin.offer.actions.button.#{type}"), "/admin/offers/#{offer.id}/#{type}",
       class: "btn btn-default btn-sm btn-action--#{type}"
   end
 

@@ -51,7 +51,6 @@ module Operations
           begin
             yield
           rescue => error
-            binding.pry
             @error = error
             raise ActiveRecord::Rollback
           end

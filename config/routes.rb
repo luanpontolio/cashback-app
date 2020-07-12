@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get '/admin', to: 'admin/offers#index'
   namespace :admin do
     resources :offers do
-      get ':id/state/:state', to: 'offers#state', :on => :collection
+      get '/:id/enabled', to: 'offers#enabled', on: :collection
+      get '/:id/disabled', to: 'offers#disabled', on: :collection
     end
   end
 end

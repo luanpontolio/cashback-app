@@ -49,8 +49,16 @@ class Admin::OffersController < AdminController
     redirect_to admin_path
   end
 
-  def state
-    offer.change!(params[:state])
+  def enabled
+    offer.start_at!
+    redirect_to admin_path
+  rescue => e
+    flash[:error] = [t('operations.standard_error')]
+    redirect_to admin_path
+  end
+
+  def disabled
+    offer.end_at!
     redirect_to admin_path
   rescue => e
     flash[:error] = [t('operations.standard_error')]
