@@ -1,0 +1,10 @@
+en:
+  operations:
+    offer:
+      base:
+        errors:
+          advertiser_name: 'The advertise name value is invalid'
+          invalid_dates: 'The start date cannot be bigger than end date'
+          description: 'The description value is invalid'
+          start_at: 'The start date value is invalid'
+          url: 'The URL value is invalid'

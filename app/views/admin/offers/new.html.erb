@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= render partial: 'form', locals: {
+      offer: @offer,
+      url: '/admin/offers',
+      title: t('page.admin.offer.actions.create')
+    }%>
+  </div>
+</div>

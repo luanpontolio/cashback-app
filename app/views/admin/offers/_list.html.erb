@@ -1,0 +1,23 @@
+<%= show_messages %>
+<table class="table table-responsive table-condensed">
+  <thead>
+    <tr>
+      <th><%= t('page.admin.offer.thead.id') %></th>
+      <th><%= t('page.admin.offer.thead.advertiser_name') %></th>
+      <th><%= t('page.admin.offer.thead.url') %></th>
+      <th><%= t('page.admin.offer.thead.state') %></th>
+      <th></th>
+    </tr>
+  </thead>
+  </tbody>
+    <% offers.each do |offer| %>
+      <tr>
+        <td><%= offer.id %></td>
+        <td><%= offer.advertiser_name %></td>
+        <td><%= offer.url %></td>
+        <td><%= offer.state %></td>
+        <td><%= offer.actions %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
