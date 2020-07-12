@@ -7,20 +7,19 @@ module Services
         @args = args
       end
 
-      def create
-        operation = Operations::Offer::Create.call(args)
-        operation.errors.map!(&message_translate).reject(&:blank?)
+      def save(action: Operations::Offers::Create.new)
+        operation = action.call(args)
+        operation.errors.map!(&message_translate)
         operation
       end
 
       private
 
       def message_translate
-        Proc.new do |error_key: nil, error_args: {}|
+        Proc.new do |error_key:, error_args:|
           I18n.translate(error_key)
         end
       end
-
     end
   end
 end

@@ -20,4 +20,30 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: 'Hello world'
+  operations:
+    standard_error: 'Something wrong happens'
+  page:
+    admin:
+      title: Leomoney Offer
+      buttons:
+        new: 'New Advertasing'
+      offer:
+        actions:
+          create: 'Create a new offer'
+          update: 'Edit your offer'
+          button:
+            edit: 'Edit'
+            destroy: 'Destroy'
+            enabled: 'Enabled'
+            disabled: 'Disabled'
+        status:
+          zero: 'Disable'
+          one: 'Enable'
+        thead:
+          id: ID
+          advertiser_name: Name
+          url: URL
+          state: Status
+        messages:
+          confirm: 'Are you sure?'

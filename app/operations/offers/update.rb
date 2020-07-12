@@ -26,7 +26,6 @@ module Operations
       private
 
       def validate_start_at(start_at)
-        binding.pry
         return result.add_error(
           i18n_error_key(:start_at)
         ) unless DateTime.current <= DateTime.parse(start_at.to_s)

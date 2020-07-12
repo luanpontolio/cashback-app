@@ -3,7 +3,12 @@ class Offer < ApplicationRecord
 
   validates :advertiser_name, :url,
     :description, :start_at, presence: true
-  validates_length_of :description, maximum: MAXIMUM_CHACTERES
 
+  enum state: [:disabled, :enabled]
 
+  def change!(value)
+    self.start_at = DateTime.current
+    self.state = value
+    self.save!
+  end
 end
